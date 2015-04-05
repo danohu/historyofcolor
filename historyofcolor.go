@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 	_ "image"
 
 	_ "image/jpeg"
@@ -16,6 +17,7 @@ func getwd() string{
 	// https://groups.google.com/forum/#!topic/golang-nuts/rdk-HdpxQps
 
 	var goroot string = os.Getenv("GOPATH")
+	goroot = strings.TrimRight(goroot, ":")
 	var packagename string = "github.com/danohuiginn/historyofcolor"
 	return goroot + "/src/" + packagename + "/"
 }
