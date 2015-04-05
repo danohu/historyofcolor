@@ -15,7 +15,7 @@ func getwd() string{
 	// binary data -- see e.g. the fruitless discussion at
 	// https://groups.google.com/forum/#!topic/golang-nuts/rdk-HdpxQps
 
-	var goroot string = "/home/src/golang"
+	var goroot string = os.Getenv("GOPATH")
 	var packagename string = "github.com/danohuiginn/historyofcolor"
 	return goroot + "/src/" + packagename + "/"
 }
